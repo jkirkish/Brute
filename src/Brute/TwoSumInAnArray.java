@@ -32,6 +32,7 @@ public class TwoSumInAnArray {
         // Example One
         ArrayList<Integer> numbers1 = new ArrayList<>(List.of(5, 3, 10, 45, 1));
         Integer target1 = 6;
+        two_sum(numbers1, target1);
         System.out.println(two_sum(numbers1, target1)); // Output: [0, 4]
 
         // Example Two

@@ -34,10 +34,15 @@ public class TopKFrequentElements {
     }
 
     public static void main(String[] args) {
-        // Example One
+
         ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 3, 1));
-        int k1 = 2;
+        int k1 = 3;
         System.out.println(find_top_k_frequent_elements(arr1, k1));
+
+        // Example One
+        ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 3, 1));
+        int k3 = 2;
+        System.out.println(find_top_k_frequent_elements(arr3, k3));
 
         // Example Two
         ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 2, 1, 2, 3, 1));

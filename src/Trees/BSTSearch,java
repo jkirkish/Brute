@@ -1,0 +1,44 @@
+class BinaryTreeNode {
+    Integer value;
+    BinaryTreeNode left;
+    BinaryTreeNode right;
+
+    BinaryTreeNode(Integer value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class BSTSearch {
+
+    static Boolean search_node_in_bst(BinaryTreeNode root, Integer value) {
+        // Base case: if root is null or the value is found at the root
+        if (root == null || root.value.equals(value)) {
+            return root != null; // return false if root is null, true otherwise
+        }
+
+        // Recur for left subtree if the value is less than the root's value
+        if (value < root.value) {
+            return search_node_in_bst(root.left, value);
+        }
+        // Recur for right subtree if the value is greater than the root's value
+        else {
+            return search_node_in_bst(root.right, value);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Example usage:
+        BinaryTreeNode root = new BinaryTreeNode(5);
+        root.left = new BinaryTreeNode(3);
+        root.right = new BinaryTreeNode(7);
+        root.left.left = new BinaryTreeNode(2);
+        root.left.right = new BinaryTreeNode(4);
+        root.right.left = new BinaryTreeNode(6);
+        root.right.right = new BinaryTreeNode(8);
+
+        Integer searchValue = 4;
+        System.out.println("Is value " + searchValue + " present in BST? " + search_node_in_bst(root, searchValue));
+    }
+}

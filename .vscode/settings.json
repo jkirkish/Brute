@@ -1,3 +1,7 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "\"**/*.class\": true": true,
+    "\"**/*.java\": false": true
+  }
 }
